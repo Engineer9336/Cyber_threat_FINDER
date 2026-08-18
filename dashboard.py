@@ -17,12 +17,12 @@ st.set_page_config(page_title="Cyber Threat Detection Dashboard", layout="wide")
 # Load models and metadata
 @st.cache_resource
 def load_models():
-    model_metadata = json.load(open('models/model_metadata.json'))
-    best_model = joblib.load(f"models/{model_metadata['best_model_file']}")
-    preprocessor = joblib.load('models/preprocessor.joblib')
-    le_cat = joblib.load('models/label_encoder_attack_categories.joblib')
-    iso_forest = joblib.load('models/isolation_forest_anomaly_detector.joblib')
-    risk_scores_df = pd.read_csv('models/risk_scores_test_set.csv')
+    model_metadata = json.load(open('model_metadata.json'))
+    best_model = joblib.load(model_metadata['best_model_file'])
+    preprocessor = joblib.load('preprocessor.joblib')
+    le_cat = joblib.load('label_encoder_attack_categories.joblib')
+    iso_forest = joblib.load('isolation_forest_anomaly_detector.joblib')
+    risk_scores_df = pd.read_csv('risk_scores_test_set.csv')
     return model_metadata, best_model, preprocessor, le_cat, iso_forest, risk_scores_df
 
 model_metadata, best_model, preprocessor, le_cat, iso_forest, risk_scores_df = load_models()
@@ -124,7 +124,7 @@ st.markdown("---")
 # ============================================================
 st.subheader("⭐ Top 15 Important Features")
 
-feat_importance_df = pd.read_csv('models/feature_importance_full.csv').head(15)
+feat_importance_df = pd.read_csv('feature_importance_full.csv').head(15)
 fig, ax = plt.subplots(figsize=(10, 5))
 feat_importance_df.sort_values('importance', ascending=True).plot(
     x='feature', y='importance', kind='barh', ax=ax, legend=False, color='#3498db'
