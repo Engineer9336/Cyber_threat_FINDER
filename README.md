@@ -6,6 +6,10 @@
 
 This is a **complete end-to-end machine learning pipeline** for detecting and classifying cyber threats in network traffic. Built with real data (UNSW-NB15 dataset, 257K network flows) and production-ready code.
 
+## 🔗 Project website
+
+Live demo: [Cyber_threat_FINDER — Web App](https://cyberthreatfindergit-3dlu2kdk668kse8petuprc.streamlit.app/)
+
 ### Key Results
 
 | Metric | Value |
