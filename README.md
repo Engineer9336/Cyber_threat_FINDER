@@ -339,7 +339,7 @@ If you use this project for academic work, cite as:
 AI-Based Cyber Threat Detection Framework (2026)
 Dataset: UNSW-NB15 (Moustafa & Slay, 2015)
 Framework: XGBoost, Random Forest, Isolation Forest
-GitHub: [your repo]
+GitHub: https://github.com/Engineer9336/Cyber_threat_FINDER.git
 ```
 
 ---
