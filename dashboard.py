@@ -136,7 +136,9 @@ st.markdown("---")
 # ============================================================
 st.subheader("⭐ Top 15 Important Features")
 
-feat_importance_df = pd.read_csv('models/feature_importance_full.csv').head(15)
+feat_importance_df = pd.read_csv(
+    'feature_importance_full.csv'
+).head(15)
 fig, ax = plt.subplots(figsize=(10, 5))
 feat_importance_df.sort_values('importance', ascending=True).plot(
     x='feature', y='importance', kind='barh', ax=ax, legend=False, color='#3498db'
