@@ -8,8 +8,8 @@ import pandas as pd
 import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
-MODEL_PATH = ROOT / "models" / "iot_threat_model.joblib"
-META_PATH = ROOT / "models" / "iot_model_metadata.json"
+MODEL_PATH = ROOT / "iot_threat_model.joblib"
+META_PATH = ROOT / "iot_model_metadata.json"
 MAX_UPLOAD_MB = 100
 MAX_ROWS = 100_000
 BENIGN_NAMES = {"benigntraffic", "benign", "normal", "normaltraffic"}
